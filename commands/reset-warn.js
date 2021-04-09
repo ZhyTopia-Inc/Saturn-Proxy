@@ -1,5 +1,8 @@
 const db = require(`quick.db`)
 const discord = require(`discord.js`)
+const conf = require(`../config.json`)
+const config = require(`../config.json`)
+const Discord = require(`discord.js`)
 
 exports.run = async (client, message, args) => {   
     if (!message.member.hasPermission('MANAGE_GUILD') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {

@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
       .setFooter(`Replying to ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
       .addFields(
         { name: 'Information', value: `Developer: ${Dev}\nName: ${client.user.tag}\nPrefix: ${config.prefix}\nCreated since: January 3, 2021` },
-        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}\nCPU Usage: ${CPU}%` }
+        { name: `Statistics`, value: `Guilds: ${guild}\nUsers: ${user}\nMemory Usage: ${usage}\nCPU Usage: ${CPU}%\nUptime: ${parseDur(client.uptime)}` }
       )
       .setTimestamp()
 
